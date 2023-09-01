@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Users</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/cadastrocarro">Adicionar Carro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--Main Content-->
+    <div class="mt-5">
+        <h1 class="text-center">View Users</h1>
+        <div class="container">
+            <!--Add User Button-->
+            <div class="my-3">
+                <a href="/cadastrocarro"><button type="button" class="btn btn-primary">Adicionar Carro</button></a>
+            </div>
+            <table class="table border" >
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">placa</th>
+                    <th scope="col">Renavam</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Ano de fabricação</th>
+                    <th scope="col">Ano de Modelo</th>
+                    <th scope="col">Cor</th>
+                    <th scope="col">Combustivel</th>
+                    <th scope="col">Quilometragem</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Valor de Compra</th>
+                    <th scope="col">Anexo documento</th>
+                    <th scope="col">Data de Entrada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let carro of carros">
+                    <td>{{carro.idcar}}</td>
+                    <td>{{carro.placa}}</td>
+                    <td>{{carro.renavam}}</td>
+                    <td>{{carro.marca}}</td>
+                    <td>{{carro.modelo}}</td>
+                    <td>{{carro.anodefabricacao}}</td>
+                    <td>{{carro.anodemodelo}}</td>
+                    <td>{{carro.cor}}</td>
+                    <td>{{carro.combustivel}}</td>
+                    <td>{{carro.quilometragem}}</td>
+                    <td>{{carro.tipo}}</td>
+                    <td>{{carro.valordecompra}}</td>
+                    <td>{{carro.anexodoc}}</td>
+                    <td>{{carro.datadeentrada}}</td>
+                    <td>
+                        <div class="d-inline mx-2">
+                            <button class="btn btn-warning" (click)="updateCarro(carro.idcar)" type="button">Update</button>
+                        </div>
+                        <div class="d-inline">
+                          <button class="btn btn-danger" (click)="deleteCarro(carro.idcar)" type="button">Delete</button>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

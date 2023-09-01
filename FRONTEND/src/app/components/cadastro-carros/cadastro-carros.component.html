@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Carro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <!--Main Content-->
+    <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Add Carro</h2>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+          <!--placa-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Placa" class="form-label">Placa</label>
+              <input id="placa"  formControlName="placa" type="text" name="placa" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Renavam-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Renavam" class="form-label">Renavam</label>
+              <input id="renavam" type="number"  formControlName="renavam" name="renavam" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Marca-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Marca" class="form-label">Marca</label>
+              <input id="marca" type="text"  formControlName="marca" name="marca" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Modelo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Modelo" class="form-label">Modelo</label>
+              <input id="modelo" type="text"  formControlName="modelo" name="modelo" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Ano de Fabricação-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Ano de Fabricacao" class="form-label">Ano de Fabricação</label>
+              <input id="anodefabricacao" type="number"  formControlName="anodefabricacao" name="anodefabricacao" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Ano de Modelo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Ano de Modelo" class="form-label">Ano de Modelo</label>
+              <input id="anodemodelo" type="number"  formControlName="anodemodelo" name="anodemodelo" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Cor-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Cor" class="form-label">Cor</label>
+              <input id="cor" type="text"  formControlName="cor" name="cor" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Combustível-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Combustivel" class="form-label">Combustível</label>
+              <input id="combustivel" type="text"  formControlName="combustivel" name="combustivel" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Quilometragem-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Quilometragem" class="form-label">Quilometragem</label>
+              <input id="quilometragem" type="number"  formControlName="quilometragem" name="quilometragem" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Tipo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Tipo" class="form-label">Tipo</label>
+              <input id="tipo" type="text"  formControlName="tipo" name="tipo" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Valor de Compra-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Valor de Compra" class="form-label">Valor de Compra</label>
+              <input id="valordecompra" type="number"  formControlName="valordecompra" name="valordecompra" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Anexo documento-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Anexo Documento" class="form-label">Anexo Documento</label>
+              <input id="anexodoc" type="file"  formControlName="anexodoc" name="anexodoc" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Data de Entrada-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Dta de Entrada" class="form-label">Data de Entrada</label>
+              <input id="datadeentrada" type="date"  formControlName="datadeentrada" name="datadeentrada" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+         <!--Enviar-->
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Enviar">
+            </div>
+          </div>
+
+          <div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

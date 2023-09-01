@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KaspperMotors</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="assets/js/jquery-1.7.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/tms-0.4.1.js"></script>
+  <script>
+      $(document).ready(function () {
+          $('.slider')._TMS({
+              show: 0,
+              pauseOnHover: true,
+              prevBu: '.prev',
+              nextBu: '.next',
+              playBu: false,
+              duration: 500,
+              preset: 'fade',
+              pagination: true, //'.pagination',true,'<ul></ul>'
+              pagNums: false,
+              slideshow: 8000,
+              numStatus: false,
+              banners: 'fromBottom', // fromLeft, fromRight, fromTop, fromBottom
+              waitBannerAnimation: false,
+              progressBar: false
+          })
+      })
+      $(function () {
+          if ($(window).width() <= 1066) {
+              $("#slider .prev").css("left", "55px")
+              $("#slider .next").css("right", "55px")
+          }
+      })
+  </script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+  <app-root></app-root>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

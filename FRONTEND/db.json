@@ -1,0 +1,20 @@
+{
+  "carros": [
+    {
+      "idcar":1,
+    "placa": 4251,
+    "renavam": 1111111111,
+    "marca": "fiat",
+    "modelo":"palio",
+    "anodefabricacao":2000,
+    "anodemodelo":2001,
+    "cor":"azul",
+    "combustivel":"gasolina",
+    "quilometragem":135000,
+    "tipo":"sedã",
+    "valordecompra":20000,
+    "anexodoc":"link",
+    "datadeentrada":252525
+    }
+  ]
+}   
